@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('/public/variables.css');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background-body);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* For the main button style */
+.primary_btn {
+    display: flex;
+    width: 235px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--default-primary, #1A1A1A);
+    background: var(--primary-primary-main, #5947FF);
+    color: var(--default-white);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    transition: box-shadow 0.1s ease-out;
+}
+
+.primary_btn:hover {
+    border: 2px solid var(--primary-main);
+    box-shadow: 4px 6px 0px 0px var(--default-primary);
+    cursor: pointer;
+}
+
+.primary_btn:active {
+    border: 2px solid var(--primary-main);
+    cursor: pointer;
+}
+
+/* Social Media Links hover opacity effect */
+.links a:hover, .footer_links a:hover {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .navbar {
+        padding: 24px 80px;
+    }
+
+    .footer_section {
+        padding: 0px 80px;
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        padding: 20px 64px;
+    }
+
+    .footer_section {
+        padding: 0px 64px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 8px 40px;
+    }
+
+    .navbar .navbar_items  {
+        display: none;
+    }
+
+    .navbar .hamburger_menu {
+        display: block;
+    }
+
+    /* for displaying sidebar */
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar_backdrop.show_backdrop {
+        opacity: .6;
+        z-index: 1;
+    }
+
+    /* -------- */
+
+
+    .footer_section {
+        padding: 0px 40px;
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    /* body {
+        background-color: rgb(162, 80, 255);
+    } */
+
+    .navbar {
+        padding: 4px 24px;
+    }
+
+    .navbar .navbar_items  {
+        display: none;
+    }
+
+    .navbar .hamburger_menu {
+        display: block;
+    }
+
+    /* for displaying sidebar */
+    .sidebar.active {
+        right: 0;
+    }
+
+    .sidebar_backdrop.show_backdrop {
+        opacity: .6;
+        z-index: 1;
+    }
+
+    /* -------- */
+
+    .project_showcase_section .cards_holder {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card_infos > .title {
+        font-size: 20px;
+    }
+
+    .card_infos > .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .primary_btn {
+        font-size: 14px;
+        line-height: 20px;
+        width: 220px;
+    }
+
+    .footer_section {
+        height: 140px;
+        padding: 32px 24px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+
+    }
+
+    .footer_section > #copywright_text {
+        font-size: 14px;
+        line-height: 20px
+    }
+
+    .footer_links img {
+        width: 32px;
+        height: 32px;
+    }
+}

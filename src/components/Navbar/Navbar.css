@@ -1,0 +1,83 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 24px 112px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: var(--background-surface);
+    z-index: 1;
+}
+
+.navbar > .logo_holder {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(26, 26, 26, 0.08);
+    cursor: pointer;
+}
+
+.navbar > .logo_holder > img {
+    width: 24px;
+    height: 25.574px;
+    flex-shrink: 0;
+}
+
+.navbar .navbar_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.navbar .nav_item {
+    display: inline-flex;
+    padding: 8px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar .nav_item:hover {
+    border-bottom: 2px solid var(--default-primary);
+    transition: border-bottom 0.5s ease-out;
+}
+
+/* for active state only purpose */
+#active_nav_item {
+    border-bottom: 2px solid var(--default-primary);
+}
+
+.navbar .nav_link {
+    color: var(--default-primary);
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.navbar .hamburger_menu {
+    display: none;
+    border: 0;
+    background: 0 0;
+    margin: 12px 0px 12px 8px;
+    opacity: 0.6;
+    transition: opacity 0.5s ease-out;
+}
+
+.navbar .hamburger_menu:hover {
+    opacity: 1;
+}
+  
+#menu_icon {
+    width: 40px;
+    height: 40px;
+}
