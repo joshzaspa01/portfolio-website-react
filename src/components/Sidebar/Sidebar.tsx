@@ -45,7 +45,7 @@ function CustomLink(props: CustomLinkProps) {
     const isActive = useMatch({path: resolvedPath.pathname, end: true})
 
     return (
-        <li className="nav_item" id={isActive ? 'active_sidebar_item': ''}>
+        <li className="nav_item" onClick={showSidebar} id={isActive ? 'active_sidebar_item': ''}>
             <Link className="nav_link" to={props.to}>{props.children}</Link>
         </li>
     )

@@ -6,7 +6,6 @@ import './Home.css'
 import { animated } from "@react-spring/web";
 import { fadeAndSlideAnimation, fadeInAnimation, wiggleAnimation } from "../../utils/animationHelpers";
 
-
 interface HomeProps {
     onClick: () => void
 }
@@ -32,7 +31,6 @@ function HeroSection(props: HomeProps ) {
     const wiggle = wiggleAnimation()
 
     const fade = fadeInAnimation()
-
 
     return (
         <>

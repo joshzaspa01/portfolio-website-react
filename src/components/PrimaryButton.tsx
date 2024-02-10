@@ -4,7 +4,7 @@ import { scaleAnimation } from "../utils/animationHelpers";
 interface PrimaryButtonProps {
     value: string,
     id: string,
-    onClick: () => void
+    onClick: () => void,
 }
 
 function PrimaryButton(props: PrimaryButtonProps) {
@@ -13,7 +13,7 @@ function PrimaryButton(props: PrimaryButtonProps) {
     
     return (
         <>
-            <animated.input ref={ref} style={springProps} className="primary_btn" id={props.id} type="button" value={props.value} onClick={props.onClick}/>
+            <animated.input ref={ref} style={springProps} className={`primary_btn`} id={props.id} type="button" value={props.value} onClick={props.onClick}/>
         </>
     )
 }

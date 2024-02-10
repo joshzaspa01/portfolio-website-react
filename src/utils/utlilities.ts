@@ -10,6 +10,8 @@ const sendingEmail = () => {
 
     // Open the default email client
     window.location.href = mailtoUrl;
+
+
 }
 
 
@@ -27,6 +29,7 @@ const showSidebar = () => {
       console.error('One or more elements not found.');
     }
 
+
 }
 
 
@@ -41,11 +44,13 @@ const downloadCV = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+
 }
 
 
 export {
   sendingEmail,
   showSidebar,
-  downloadCV
+  downloadCV,
 }
