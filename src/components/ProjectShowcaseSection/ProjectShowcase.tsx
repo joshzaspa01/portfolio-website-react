@@ -16,7 +16,8 @@ interface Project {
     title: string,
     subtitle: string,
     behanceLink: string,
-    view_on_homepage: boolean
+    view_on_homepage: boolean,
+    createdDate: string
 }
 
 function ProjectShowcase(props: ProjectShowcaseProps) {
@@ -27,9 +28,18 @@ function ProjectShowcase(props: ProjectShowcaseProps) {
         setCardData(projects)
     }, []);
 
-    const homePageCards = cardData.filter(item => item.view_on_homepage)
+    // Sorting the projects from newest to oldest
+    const sortedProjects = cardData.slice().sort((a, b) => {
+        const dateA: Date  = new Date(a.createdDate);
+        const dateB: Date = new Date(b.createdDate);
+              
+        return dateB.getTime() - dateA.getTime();
+    });
+
+
+    const homePageCards = sortedProjects.filter(item => item.view_on_homepage)
   
-    const projectsPageCards = cardData.map(val => val)
+    const projectsPageCards = sortedProjects.map(val => val)
 
     const projectsCardsArray = props.currentPage === 'Home' ? homePageCards : projectsPageCards;
 
