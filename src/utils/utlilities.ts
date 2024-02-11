@@ -47,7 +47,7 @@ const downloadCV = () => {
 
     let link = document.createElement('a');
 
-    link.setAttribute('download', 'CV_JoshuaZaspa');
+    // link.setAttribute('download', 'CV_JoshuaZaspa');
     link.href = cv;
 
     document.body.appendChild(link);
