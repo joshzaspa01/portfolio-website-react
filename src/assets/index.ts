@@ -26,7 +26,7 @@ import smBanner from './projects/sm_banner_thumbnail.png'
 import wheatherApp from './projects/wheather_app_thumbnail.png'
 
 
-import cv from './cv/CV.pdf'
+import cv from './cv/CV_JoshuaZaspa.pdf'
 
 
 export {
