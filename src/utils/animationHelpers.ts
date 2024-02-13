@@ -1,7 +1,9 @@
 import { useSpring } from "@react-spring/web";
+import { useState } from "react";
 import { useInView } from 'react-intersection-observer';
+import { showSidebar } from "./utlilities";
 
-const fadeInAnimation = (): any => {
+export const fadeInAnimation = (): any => {
   return useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -10,14 +12,16 @@ const fadeInAnimation = (): any => {
   });
 };
 
-const slideInAnimation = (): any => {
+
+export const slideInAnimation = (): any => {
   return useSpring({
     from: { transform: 'translateX(-100%)' },
     to: { transform: 'translateX(0%)' },
   });
 };
 
-const scaleAnimation = (): any => {
+
+export const scaleAnimation = (): any => {
 
     const [ref, inView] = useInView({
       triggerOnce: false,
@@ -31,7 +35,8 @@ const scaleAnimation = (): any => {
     return { ref, springProps }
 };
 
-const bounceAnimation = (): any => {
+
+export const bounceAnimation = (): any => {
     return useSpring({
       from: { transform: 'translateY(-100px)' },
       to: { transform: 'translateY(0px)' },
@@ -42,7 +47,8 @@ const bounceAnimation = (): any => {
     });
 };
 
-const wiggleAnimation = (): any => {
+
+export const wiggleAnimation = (): any => {
     return useSpring({
       from: { transform: 'rotate(-10deg)' },
       to: { transform: 'rotate(10deg)' },
@@ -51,7 +57,8 @@ const wiggleAnimation = (): any => {
     });
 };
 
-const fadeAndSlideAnimation = (): any => {
+
+export const fadeAndSlideAnimation = (): any => {
 
     const [ref, inView] = useInView({
         triggerOnce: false,
@@ -66,7 +73,8 @@ const fadeAndSlideAnimation = (): any => {
     return { ref, springProps }
 };
 
-const popUpAnimation = (): any => {
+
+export const popUpAnimation = (): any => {
   
   const [ref, inView] = useInView({
       triggerOnce: false,
@@ -80,12 +88,32 @@ const popUpAnimation = (): any => {
   return { ref, springProps };
 }
 
-export {
-  popUpAnimation,
-  fadeInAnimation,
-  slideInAnimation,
-  bounceAnimation,
-  scaleAnimation,
-  wiggleAnimation,
-  fadeAndSlideAnimation,
+
+// sidebar overlay animation
+export const sidebarOverlayAnimation = () => {
+
+    const [toggler, setToggler] = useState(false)
+
+    const [overlaySpring, api] = useSpring(() => ({
+        from: {
+            opacity: toggler ? 1 : 0,
+            display: toggler ? 'block' : 'none' 
+        }
+    }))
+
+    const overlaySetter = () => {
+
+        setToggler(prevToggler => !prevToggler)
+
+        api.start({
+            to: {
+                opacity: !toggler ? 1 : 0,
+                display: !toggler ? 'block' : 'none'
+            }
+        })
+
+        showSidebar()
+    }
+
+    return { overlaySetter, overlaySpring }
 }

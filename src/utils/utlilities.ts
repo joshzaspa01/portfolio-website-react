@@ -20,25 +20,18 @@ const sendingEmail = () => {
 // Showing Sidebar
 const showSidebar = () => {
 
-    const hamburgerMenu = document.querySelector('.hamburger_menu');
+    const hamburgerMenu: any = document.querySelector('.hamburger_menu');
 
-    const sidebar = document.querySelector('.sidebar');
+    const sidebar: any = document.querySelector('.sidebar');
 
-    const sidebarBackdrop = document.querySelector('.sidebar_backdrop');
-  
-    if (hamburgerMenu && sidebar && sidebarBackdrop) {
+    const sidebarBackdrop: any = document.querySelector('.sidebar_backdrop');
 
-      hamburgerMenu.classList.toggle('open');
+    hamburgerMenu.classList.toggle('open');
 
-      sidebar.classList.toggle('active');
+    sidebar.classList.toggle('active');
 
-      sidebarBackdrop.classList.toggle('show_backdrop');
-
-    } else {
-      console.error('One or more elements not found.');
-    }
-
-
+    sidebarBackdrop.classList.toggle('show_backdrop')
+    
 }
 
 
@@ -54,7 +47,6 @@ const downloadCV = () => {
     link.click();
     document.body.removeChild(link);
     
-
 }
 
 

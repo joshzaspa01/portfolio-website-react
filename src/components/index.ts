@@ -1,13 +1,13 @@
 import Navbar from "./Navbar/Navbar";
-import Sidebar from "./Sidebar/Sidebar";
 import ProjectShowcase from "./ProjectShowcaseSection/ProjectShowcase";
 import Footer from "./Footer/Footer";
-import PrimaryButton from "./PrimaryButton";
+import Button from "./UI/Button";
+import CustomLink from "./Navbar/CustomLink";
 
 export {
     Navbar,
-    Sidebar,
     ProjectShowcase,
     Footer,
-    PrimaryButton
+    Button,
+    CustomLink
 }

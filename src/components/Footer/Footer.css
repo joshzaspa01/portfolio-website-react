@@ -1,4 +1,3 @@
-/* Footer Section */
 .footer_section {
     display: flex;
     width: 100%;
@@ -8,7 +7,6 @@
     align-items: center;
     background: var(--default-primary);
     margin-top: auto;
-
 }
 
 .footer_section > #copywright_text {
@@ -36,3 +34,45 @@
 .footer_links > a:hover {
     opacity: 0.7;
 }
+
+
+@media only screen and (max-width: 1200px) {
+
+    .footer_section {
+        padding: 0px 80px;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .footer_section {
+        padding: 0px 40px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .footer_section {
+        height: 140px;
+        padding: 32px 24px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    
+    }
+    
+    .footer_section > #copywright_text {
+        font-size: 14px;
+        line-height: 20px
+    }
+    
+    .footer_links img {
+        width: 32px;
+        height: 32px;
+    }
+}
+

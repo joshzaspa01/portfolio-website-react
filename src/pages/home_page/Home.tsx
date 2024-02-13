@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { emailIcon, behanceIcon, linkedinIcon, wavehandIcon, starIcon, profilePic, shapesBG } from '../../assets'
-import { PrimaryButton, ProjectShowcase } from "../../components";
+import { Button, ProjectShowcase } from "../../components";
 import { sendingEmail, downloadCV } from "../../utils/utlilities";
 import './Home.css'
 import { animated } from "@react-spring/web";
@@ -62,7 +62,7 @@ function HeroSection(props: HomeProps ) {
                             </Link>
                         </div>
 
-                        <PrimaryButton value="Download CV" id="hero_section_cta" onClick={downloadCV}/>
+                        <Button value="Download CV" id="hero_section_cta" onClick={downloadCV}/>
 
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import { PrimaryButton } from "../../components";
+import { Button } from "../../components";
 import './Contact.css'
 import { Link } from "react-router-dom";
 import { behanceIcon, linkedinIcon, astroIllustration } from "../../assets";
@@ -33,7 +33,7 @@ function Contact() {
                         <div></div>
                     </div>
                     
-                    <PrimaryButton value="Send an email" id="send_email_btn" onClick={sendingEmail}/>
+                    <Button value="Send an email" id="send_email_btn" onClick={sendingEmail}/>
                 </div>
             </div>
         </animated.section>

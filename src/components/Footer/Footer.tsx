@@ -1,8 +1,8 @@
 import { Link, useLocation} from 'react-router-dom'
 import { emailIcon, behanceIcon, linkedinIcon } from '../../assets'
-import './Footer.css'
 import { useEffect, useState } from 'react'
 import { sendingEmail } from '../../utils/utlilities'
+import './Footer.css'
 
 
 function Footer() {
@@ -16,7 +16,6 @@ function Footer() {
 
 
     const location = useLocation();
-
 
     return (
         <>

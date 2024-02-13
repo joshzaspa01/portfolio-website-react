@@ -15,7 +15,7 @@
 }
 
 .project_card:hover {
-    box-shadow: 12px 12px 0px 0px #1A1A1A;
+    box-shadow: 12px 12px 0px 0px var(--default-primary);
     border: 2px solid var(--default-primary);
 }
 
