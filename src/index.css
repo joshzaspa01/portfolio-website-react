@@ -22,7 +22,6 @@ body {
     flex-direction: column;
     position: relative;
     overflow-x: hidden;
-    color: var(--default-white);
 }
 
 
